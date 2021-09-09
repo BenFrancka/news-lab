@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticleContainer from '../ArticleContainer';
+import ArticleContainer from '../../containers/ArticleContainer';
 
 export default function App() {
   return <ArticleContainer />;

@@ -5,16 +5,9 @@ import { render, screen } from '@testing-library/react';
 import Article from './Article';
 
 describe('Article', () => {
-  it.skip('should be a single article object', async () => {
-    const article = (
-      <>
-        <h2>title</h2>
-        <h3>author</h3>
-        <p>description</p>
-      </>
-    );
-    render(<Article article={article} />);
-
+  it('should be a single article object', async () => {
+    render(<Article title="title" author="author" description="description" />);
+    
     const h2 = await screen.findByText('title');
     const h3 = await screen.findByText('author');
     const p = await screen.findByText('description');

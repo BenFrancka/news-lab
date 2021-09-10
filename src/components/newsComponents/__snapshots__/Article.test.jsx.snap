@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article should be a single article object 1`] = `
+<h3>
+  author
+</h3>
+`;
+
+exports[`Article should be a single article object 2`] = `
+<h2>
+  title
+</h2>
+`;
+
+exports[`Article should be a single article object 3`] = `
+<p>
+  description
+</p>
+`;

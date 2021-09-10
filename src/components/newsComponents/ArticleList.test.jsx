@@ -2,7 +2,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-//import ArticleContainer from '../../containers/ArticleContainer';
 import ArticleList from './ArticleList';
 
 describe('Article List', () => {

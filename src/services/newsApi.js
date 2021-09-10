@@ -11,6 +11,6 @@ export const fetchArticlesBySearchTerm = async (searchTerm) => {
     `https://newsapi.org/v2/everything?apiKey=${process.env.API_KEY}&qInTitle=${searchTerm}`
   );
   const json = await res.json();
-  console.log(json);
+  
   return formatArticles(json);
 };

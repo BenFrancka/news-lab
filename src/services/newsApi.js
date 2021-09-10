@@ -8,7 +8,7 @@ export const formatArticles = (json) =>
 export const fetchArticlesBySearchTerm = async (searchTerm) => {
   const res = await fetch(
     // eslint-disable-next-line max-len
-    `https://newsapi.org/v2/everything?apiKey=${process.env.API_KEY}&q=${searchTerm}`
+    `https://newsapi.org/v2/everything?apiKey=${process.env.API_KEY}&qInTitle=${searchTerm}`
   );
   const json = await res.json();
 

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchControls should be comprised on an input and a button 1`] = `
+<input
+  id="searchTerm"
+  type="text"
+  value=""
+/>
+`;
+
+exports[`SearchControls should be comprised on an input and a button 2`] = `
+<button
+  aria-label="search-articles"
+>
+  Search
+</button>
+`;

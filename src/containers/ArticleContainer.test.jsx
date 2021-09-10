@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -11,16 +13,17 @@ describe('ArticleContainer', () => {
     userEvent.type(input, 'snakes');
 
     const submitButton = await screen.findByRole('button', {
-      name: 'search-artilces',
+      name: 'search-articles',
     });
     userEvent.click(submitButton);
 
     screen.getByText('Loading...');
 
     return waitFor(() => {
+      
       const articles = screen.getAllByText('snakes', { exact: false });
 
-      expect(articles).toHaveTextContent;
+      expect(articles.length).toBeGreaterThan(2);
     });
 
 

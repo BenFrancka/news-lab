@@ -1,0 +1,16 @@
+export const formatArticles = (json) =>
+  json.articles.map((article) => ({
+    title: article.title,
+    author: article.author,
+    descripton: article.descripton,
+  }));
+
+export const fetchArticlesBySearchTerm = async (searchTerm) => {
+  const res = await fetch(
+    // eslint-disable-next-line max-len
+    `https://newsapi.org/v2/everything?apiKey=${process.env.API_KEY}&q=${searchTerm}`
+  );
+  const json = await res.json();
+
+  return formatArticles(json);
+};

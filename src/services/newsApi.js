@@ -2,7 +2,7 @@ export const formatArticles = (json) =>
   json.articles.map((article) => ({
     title: article.title,
     author: article.author,
-    descripton: article.descripton,
+    description: article.description,
   }));
 
 export const fetchArticlesBySearchTerm = async (searchTerm) => {

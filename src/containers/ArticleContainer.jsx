@@ -5,13 +5,13 @@ import { fetchArticlesBySearchTerm } from '../services/newsApi';
 
 export default class ArticleContainer extends Component {
   state = {
-    loading: true,
+    loading: false,
     searchTerm: '',
     articles: [],
   };
 
   handleSearchTermChange = (event) => {
-    this.setState({ search: event.target.value });
+    this.setState({ searchTerm: event.target.value });
   };
 
   handleSubmit = async (event) => {
